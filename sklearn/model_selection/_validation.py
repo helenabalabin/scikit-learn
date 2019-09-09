@@ -28,6 +28,7 @@ from ..metrics.scorer import check_scoring, _check_multimetric_scoring
 from ..exceptions import FitFailedWarning
 from ._split import check_cv
 from ..preprocessing import LabelEncoder
+import logging
 
 
 __all__ = ['cross_validate', 'cross_val_score', 'cross_val_predict',
