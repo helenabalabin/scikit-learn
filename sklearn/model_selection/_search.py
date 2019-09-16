@@ -676,13 +676,13 @@ class BaseSearchCV(BaseEstimator, MetaEstimatorMixin, metaclass=ABCMeta):
                 n_candidates = len(candidate_params)
 
                 if self.verbose > 0:
-                    # Add logging in addition to the print statement
+                    # Add logging instead of the print statement
                     logging.debug("Fitting {0} folds for each of {1} candidates,"
                           " totalling {2} fits".format(
                               n_splits, n_candidates, n_candidates * n_splits))
-                    print("Fitting {0} folds for each of {1} candidates,"
-                          " totalling {2} fits".format(
-                              n_splits, n_candidates, n_candidates * n_splits))
+                    #print("Fitting {0} folds for each of {1} candidates,"
+                    #      " totalling {2} fits".format(
+                    #          n_splits, n_candidates, n_candidates * n_splits))
 
                 out = parallel(delayed(_fit_and_score)(clone(base_estimator),
                                                        X, y,
