@@ -557,9 +557,9 @@ def _fit_and_score(estimator, X, y, scorer, train, test, verbose,
     if verbose > 1:
         total_time = score_time + fit_time
 
-        # Add logging in addition to the print statement
+        # Use logging instead of the print statement
         logging.debug(_message_with_time('CV', msg, total_time))
-        print(_message_with_time('CV', msg, total_time))
+        # print(_message_with_time('CV', msg, total_time))
 
     ret = [train_scores, test_scores] if return_train_score else [test_scores]
 
